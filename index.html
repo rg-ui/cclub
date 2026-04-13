@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NITA Consulting Club | Elite Strategy</title>
+    
+    <!-- Fonts: Serif for Headings, Sans-Serif for Body -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo-container">
+                <svg class="nav-logo-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="gAll" x1="0.2" y1="0" x2="0.8" y2="1">
+                            <stop offset="0%" stop-color="#3cbbf5" />
+                            <stop offset="30%" stop-color="#1991de" />
+                            <stop offset="70%" stop-color="#0d5ba6" />
+                            <stop offset="100%" stop-color="#053466" />
+                        </linearGradient>
+                        <mask id="sliceMask">
+                            <rect x="0" y="0" width="100" height="100" fill="white" />
+                            <line x1="20" y1="45" x2="80" y2="55" stroke="black" stroke-width="2.5" />
+                            <line x1="10" y1="75" x2="85" y2="65" stroke="black" stroke-width="2.5" />
+                            <line x1="68" y1="65" x2="63" y2="95" stroke="black" stroke-width="2.5" />
+                        </mask>
+                    </defs>
+                    <polygon points="50,10 10,90 90,90" fill="url(#gAll)" mask="url(#sliceMask)" />
+                </svg>
+                <span class="logo-text">CONSULTING CLUB</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#services" class="nav-link">Practice Areas</a></li>
+                <li><a href="#teams" class="nav-link">Core</a></li>
+                <li><a href="#projects" class="nav-link">Engagements</a></li>
+            </ul>
+            <a href="#join" class="button btn-join">Join Us</a>
+            <div class="hamburger">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <!-- Abstract McKinsey Style Lines -->
+        <svg class="abstract-lines" viewBox="0 0 1000 1000" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+            <g fill="none" stroke="rgba(255, 255, 255, 0.04)" stroke-width="1.5">
+                <!-- Sweeping primary curves -->
+                <path d="M 0 300 Q 400 100, 1000 900" />
+                <path d="M 0 250 Q 450 150, 1050 900" />
+                <path d="M 0 200 Q 500 200, 1100 900" />
+                <path d="M 0 150 Q 550 250, 1150 900" />
+                <path d="M 0 100 Q 600 300, 1200 900" />
+                <path d="M 0 50  Q 650 350, 1250 900" />
+                <path d="M 0 0   Q 700 400, 1300 900" />
+                
+                <!-- Crossing arcs for a 3D funnel/grid mesh effect -->
+                <path d="M 100 0 Q 400 300, 0 800" stroke="rgba(255, 255, 255, 0.05)"/>
+                <path d="M 200 0 Q 500 400, 100 900" stroke="rgba(255, 255, 255, 0.05)"/>
+                <path d="M 300 0 Q 600 500, 200 1000" stroke="rgba(255, 255, 255, 0.05)"/>
+                <path d="M 400 0 Q 700 600, 300 1100" />
+                <path d="M 500 0 Q 800 700, 400 1200" />
+                <path d="M 600 0 Q 900 800, 500 1300" />
+                <path d="M 700 0 Q 1000 900, 600 1400" />
+            </g>
+        </svg>
+
+        <div class="container hero-container">
+            <div class="hero-content reveal fade-up">
+                <h1 class="hero-title">
+                    Building Future <br> <span class="italic-serif">Consultants</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Empowering students to solve real-world business challenges through strategic excellence and rigorous analytical methodologies.
+                </p>
+                <div class="hero-actions">
+                    <a href="#join" class="button btn-primary">Join the Elite</a>
+                    <a href="#projects" class="button btn-outline">Explore Work</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about section-padding" id="about">
+        <div class="container about-wrapper reveal fade-up">
+            <div class="about-left">
+                <h2 class="section-badge">The Mission</h2>
+                <h2 class="section-title">An Intellectual <br>Hub for <br>Strategy.</h2>
+            </div>
+            <div class="about-right">
+                <p class="section-description">
+                    The NIT Agartala Consulting Club is a bastion of professional excellence. We bridge the gap between technical rigor and strategic foresight, preparing the next generation of business leaders through intensive case pedagogy and real-world impact-driven consulting.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services section-padding" id="services">
+        <div class="container">
+            <div class="section-header reveal fade-up">
+                <h2 class="section-title">Our Practice Areas</h2>
+            </div>
+            
+            <div class="services-grid cols-5">
+                <div class="service-card reveal fade-up">
+                    <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path></svg></div>
+                    <h3>Strategy Consulting</h3>
+                    <p>Operational excellence and corporate strategy development.</p>
+                </div>
+                <div class="service-card reveal fade-up" style="transition-delay: 0.1s;">
+                    <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg></div>
+                    <h3>Market Research</h3>
+                    <p>Deep-dive analytics, competitive landscaping, and industry vectors.</p>
+                </div>
+                <div class="service-card reveal fade-up" style="transition-delay: 0.2s;">
+                    <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg></div>
+                    <h3>Product & Growth</h3>
+                    <p>Go-to-market strategies through data-driven user acquisition.</p>
+                </div>
+                <div class="service-card reveal fade-up" style="transition-delay: 0.3s;">
+                    <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg></div>
+                    <h3>Case Training</h3>
+                    <p>Rigorous preparation for top-tier consulting firm interviews.</p>
+                </div>
+                <div class="service-card reveal fade-up" style="transition-delay: 0.4s;">
+                    <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg></div>
+                    <h3>Startup Support</h3>
+                    <p>Bespoke solutions for early-stage enterprise ventures.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects section-padding" id="projects">
+        <div class="container">
+            <div class="section-header text-center reveal fade-up">
+                <h2 class="section-title">Featured Engagements</h2>
+            </div>
+            
+            <div class="case-studies-list">
+                <!-- Case Study 1 -->
+                <div class="case-row reveal fade-up">
+                    <div class="case-image">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80" alt="Consulting Case" class="bw-filter">
+                    </div>
+                    <div class="case-content">
+                        <span class="case-tag">Case Example</span>
+                        <h3 class="case-title">Optimizing Supply Chains for Agartala Logistics</h3>
+                        
+                        <div class="case-details">
+                            <div class="detail-block">
+                                <h4>Problem</h4>
+                                <p>Inefficient route mapping heading to 20% increased overhead costs.</p>
+                            </div>
+                            <div class="detail-block">
+                                <h4>Approach</h4>
+                                <p>Implemented a custom heuristic-based optimization framework.</p>
+                            </div>
+                            <div class="detail-block">
+                                <h4>Impact</h4>
+                                <p><strong>15% reduction in fuel consumption within Q3.</strong></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Case Study 2 -->
+                <div class="case-row reverse reveal fade-up">
+                    <div class="case-content">
+                        <span class="case-tag">Case Example</span>
+                        <h3 class="case-title">Digital Transformation for Local Governance</h3>
+                        
+                        <div class="case-details">
+                            <div class="detail-block">
+                                <h4>Problem</h4>
+                                <p>Paper-based auditing led to delays in citizen service delivery.</p>
+                            </div>
+                            <div class="detail-block">
+                                <h4>Approach</h4>
+                                <p>Designed the data architecture for a new management portal.</p>
+                            </div>
+                            <div class="detail-block">
+                                <h4>Impact</h4>
+                                <p><strong>A recorded 40% improvement in processing speed.</strong></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="case-image">
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=800&q=80" alt="Consulting Case" class="bw-filter">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Teams Verticals -->
+    <section class="teams section-padding" id="teams">
+        <div class="container">
+            <div class="section-header reveal fade-up">
+                <h2 class="section-title">The Internal Core</h2>
+            </div>
+            
+            <div class="verticals-grid cols-4 gap-sm reveal fade-up">
+                <div class="vertical-card">
+                    <h3>Strategy</h3>
+                    <p>Drive problem-solving frameworks and project execution.</p>
+                </div>
+                <div class="vertical-card">
+                    <h3>Design</h3>
+                    <p>Craft compelling presentations and institutional branding.</p>
+                </div>
+                <div class="vertical-card">
+                    <h3>Tech</h3>
+                    <p>Develop proprietary tools and internal infrastructure.</p>
+                </div>
+                <div class="vertical-card">
+                    <h3>Marketing</h3>
+                    <p>Unify club positioning and manage corporate relations.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Members Section -->
+    <section class="members section-padding" id="members">
+        <div class="container">
+            <div class="section-header flex-between reveal fade-up">
+                <div class="header-left">
+                    <h2 class="section-title">The Elite Community</h2>
+                    <p class="section-subtitle">A curated collective of intellectual capital.</p>
+                </div>
+                <div class="header-right">
+                    <a href="#" class="view-all">View All Members &rarr;</a>
+                </div>
+            </div>
+            
+            <div class="members-grid cols-4 reveal fade-up">
+                <div class="member-card">
+                    <div class="member-image-wrap">
+                        <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=600&q=80" alt="Aditya Sharma" class="bw-filter">
+                    </div>
+                    <div class="member-info">
+                        <h4>Aditya Sharma</h4>
+                        <span class="member-role">President, Strategy</span>
+                    </div>
+                </div>
+                
+                <div class="member-card">
+                    <div class="member-image-wrap">
+                        <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=600&q=80" alt="Riya Kabir" class="bw-filter">
+                    </div>
+                    <div class="member-info">
+                        <h4>Riya Kabir</h4>
+                        <span class="member-role">Head, Business Solutions</span>
+                    </div>
+                </div>
+                
+                <div class="member-card">
+                    <div class="member-image-wrap">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=600&q=80" alt="Vikram Singh" class="bw-filter">
+                    </div>
+                    <div class="member-info">
+                        <h4>Vikram Singh</h4>
+                        <span class="member-role">Partner, Tech & Growth</span>
+                    </div>
+                </div>
+                
+                <div class="member-card">
+                    <div class="member-image-wrap">
+                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80" alt="Navya Gupta" class="bw-filter">
+                    </div>
+                    <div class="member-info">
+                        <h4>Navya Gupta</h4>
+                        <span class="member-role">Director of Marketing</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Joining CTA -->
+    <section class="cta section-padding" id="join">
+        <div class="container reveal fade-up">
+            <h2 class="cta-title">Be Part of Something <br><span class="italic-serif">Truly Elite</span></h2>
+            <p class="cta-desc">
+                We are looking for analytical minds, radical thinkers, and driven problem-solvers. Join the premier nexus of strategy at NIT Agartala.
+            </p>
+            <a href="#" class="button btn-primary">Apply For The Next Cohort</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-wrapper">
+            <div class="footer-left">
+                <span class="logo-text footer-logo">CONSULTING CLUB</span>
+            </div>
+            <div class="footer-right">
+                <ul class="footer-links">
+                    <li><a href="#">LinkedIn</a></li>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            <div class="copyright">© 2026 THE NIT AGARTALA CONSULTING CLUB. ALL RIGHTS RESERVED.</div>
+            <div class="design-credit">IN</div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>
