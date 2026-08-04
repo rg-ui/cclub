@@ -42,9 +42,9 @@
                 <li><a href="#about" class="nav-link">About</a></li>
                 <li><a href="#services" class="nav-link">Practice Areas</a></li>
                 <li><a href="#teams" class="nav-link">Core</a></li>
-                <li><a href="#projects" class="nav-link">Engagements</a></li>
+                <li><a href="#challenge" class="nav-link">Engagements</a></li>
             </ul>
-            <a href="#join" class="button btn-join">Join Us</a>
+            <a href="#apply" class="button btn-join btn-apply-trigger">Join Us</a>
             <div class="hamburger">
                 <div class="bar"></div>
                 <div class="bar"></div>
@@ -87,8 +87,8 @@
                     Empowering students to solve real-world business challenges through strategic excellence and rigorous analytical methodologies.
                 </p>
                 <div class="hero-actions">
-                    <a href="#join" class="button btn-primary">Join the Elite</a>
-                    <a href="#projects" class="button btn-outline">Explore Work</a>
+                    <a href="#apply" class="button btn-primary btn-apply-trigger">Apply Now</a>
+                    <a href="#challenge" class="button btn-outline">Explore Work</a>
                 </div>
             </div>
         </div>
@@ -146,64 +146,73 @@
         </div>
     </section>
 
-    <!-- Projects Section -->
-    <section class="projects section-padding" id="projects">
-        <div class="container">
-            <div class="section-header text-center reveal fade-up">
-                <h2 class="section-title">Featured Engagements</h2>
-            </div>
-            
-            <div class="case-studies-list">
-                <!-- Case Study 1 -->
-                <div class="case-row reveal fade-up">
-                    <div class="case-image">
-                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80" alt="Consulting Case" class="bw-filter">
+    <!-- Interactive Case Teaser -->
+    <section class="case-teaser section-padding" id="challenge">
+        <div class="container reveal fade-up">
+            <div class="teaser-card">
+                <div class="teaser-header">
+                    <span class="teaser-badge">Guesstimate Challenge</span>
+                    <h2 class="teaser-title">How many ping-pong balls can fit in a Boeing 747?</h2>
+                </div>
+                <div class="teaser-body">
+                    <p>Test your consulting acumen. It's not about knowing the exact number, it's about your approach to structuring a complex, ambiguous problem.</p>
+                    <button class="button btn-accent" id="reveal-btn">Reveal The Framework</button>
+                </div>
+                <div class="teaser-solution" id="teaser-solution" style="display: none;">
+                    <div class="framework-step">
+                        <div class="step-num">01</div>
+                        <div class="step-desc">
+                            <h4>Calculate Volume of 747</h4>
+                            <p>Assume passenger cabin is a cylinder: V = πr²h. Estimate length and radius.</p>
+                        </div>
                     </div>
-                    <div class="case-content">
-                        <span class="case-tag">Case Example</span>
-                        <h3 class="case-title">Optimizing Supply Chains for Agartala Logistics</h3>
-                        
-                        <div class="case-details">
-                            <div class="detail-block">
-                                <h4>Problem</h4>
-                                <p>Inefficient route mapping heading to 20% increased overhead costs.</p>
-                            </div>
-                            <div class="detail-block">
-                                <h4>Approach</h4>
-                                <p>Implemented a custom heuristic-based optimization framework.</p>
-                            </div>
-                            <div class="detail-block">
-                                <h4>Impact</h4>
-                                <p><strong>15% reduction in fuel consumption within Q3.</strong></p>
-                            </div>
+                    <div class="framework-step">
+                        <div class="step-num">02</div>
+                        <div class="step-desc">
+                            <h4>Calculate Volume of Ball</h4>
+                            <p>Standard ball is ~40mm diameter. Calculate spherical volume.</p>
+                        </div>
+                    </div>
+                    <div class="framework-step">
+                        <div class="step-num">03</div>
+                        <div class="step-desc">
+                            <h4>Account for Packing Fraction</h4>
+                            <p>Spheres don't pack perfectly. Multiply total available volume by ~70-74%.</p>
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
 
-                <!-- Case Study 2 -->
-                <div class="case-row reverse reveal fade-up">
-                    <div class="case-content">
-                        <span class="case-tag">Case Example</span>
-                        <h3 class="case-title">Digital Transformation for Local Governance</h3>
-                        
-                        <div class="case-details">
-                            <div class="detail-block">
-                                <h4>Problem</h4>
-                                <p>Paper-based auditing led to delays in citizen service delivery.</p>
-                            </div>
-                            <div class="detail-block">
-                                <h4>Approach</h4>
-                                <p>Designed the data architecture for a new management portal.</p>
-                            </div>
-                            <div class="detail-block">
-                                <h4>Impact</h4>
-                                <p><strong>A recorded 40% improvement in processing speed.</strong></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="case-image">
-                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=800&q=80" alt="Consulting Case" class="bw-filter">
-                    </div>
+    <!-- Consultant's Toolkit Section -->
+    <section class="toolkit section-padding" id="toolkit">
+        <div class="container">
+            <div class="section-header text-center reveal fade-up">
+                <h2 class="section-title">The Consultant's Toolkit</h2>
+                <p class="section-subtitle" style="margin-top: 1rem;">What you actually learn when you join the elite.</p>
+            </div>
+            
+            <div class="toolkit-grid cols-4 gap-sm reveal fade-up">
+                <div class="toolkit-card">
+                    <div class="toolkit-icon">MECE</div>
+                    <h3>MECE Principle</h3>
+                    <p>Structuring problems so they are Mutually Exclusive and Collectively Exhaustive.</p>
+                </div>
+                <div class="toolkit-card">
+                    <div class="toolkit-icon">80/20</div>
+                    <h3>Pareto Analysis</h3>
+                    <p>Identifying the 20% of drivers that create 80% of the impact in any business.</p>
+                </div>
+                <div class="toolkit-card">
+                    <div class="toolkit-icon">FM</div>
+                    <h3>Financial Modeling</h3>
+                    <p>Building robust DCF models and analyzing P&L statements for valuation.</p>
+                </div>
+                <div class="toolkit-card">
+                    <div class="toolkit-icon">UI</div>
+                    <h3>Executive Slides</h3>
+                    <p>Crafting MBB-style presentations that synthesize complex data into a clear narrative.</p>
                 </div>
             </div>
         </div>
@@ -253,41 +262,31 @@
             <div class="members-grid cols-4 reveal fade-up">
                 <div class="member-card">
                     <div class="member-image-wrap">
-                        <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=600&q=80" alt="Aditya Sharma" class="bw-filter">
+                        <img src="assets/President.png" alt="Soham Dey" class="bw-filter">
                     </div>
                     <div class="member-info">
-                        <h4>Aditya Sharma</h4>
-                        <span class="member-role">President, Strategy</span>
+                        <h4>Soham Dey</h4>
+                        <span class="member-role">President</span>
                     </div>
                 </div>
                 
                 <div class="member-card">
                     <div class="member-image-wrap">
-                        <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=600&q=80" alt="Riya Kabir" class="bw-filter">
+                        <img src="assets/coremember.png" alt="Rounak Paul" class="bw-filter">
                     </div>
                     <div class="member-info">
-                        <h4>Riya Kabir</h4>
-                        <span class="member-role">Head, Business Solutions</span>
+                        <h4>Rounak Paul</h4>
+                        <span class="member-role">Core Member</span>
                     </div>
                 </div>
                 
                 <div class="member-card">
                     <div class="member-image-wrap">
-                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=600&q=80" alt="Vikram Singh" class="bw-filter">
+                        <img src="assets/coremember2.png" alt="Ravi Gupta" class="bw-filter">
                     </div>
                     <div class="member-info">
-                        <h4>Vikram Singh</h4>
-                        <span class="member-role">Partner, Tech & Growth</span>
-                    </div>
-                </div>
-                
-                <div class="member-card">
-                    <div class="member-image-wrap">
-                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80" alt="Navya Gupta" class="bw-filter">
-                    </div>
-                    <div class="member-info">
-                        <h4>Navya Gupta</h4>
-                        <span class="member-role">Director of Marketing</span>
+                        <h4>Ravi Gupta</h4>
+                        <span class="member-role">Core Member</span>
                     </div>
                 </div>
             </div>
@@ -301,7 +300,7 @@
             <p class="cta-desc">
                 We are looking for analytical minds, radical thinkers, and driven problem-solvers. Join the premier nexus of strategy at NIT Agartala.
             </p>
-            <a href="#" class="button btn-primary">Apply For The Next Cohort</a>
+            <a href="#apply" class="button btn-primary btn-apply-trigger">Apply For The Next Cohort</a>
         </div>
     </section>
 
@@ -325,6 +324,28 @@
             <div class="design-credit">IN</div>
         </div>
     </footer>
+
+    <!-- Apply Modal -->
+    <div id="apply-modal" class="modal-overlay">
+        <div class="modal-container">
+            <button class="modal-close" id="modal-close" aria-label="Close modal">&times;</button>
+            <div class="modal-header">
+                <h3 class="modal-title">Apply for the Next Cohort</h3>
+                <p class="modal-subtitle">THE NIT AGARTALA CONSULTING CLUB</p>
+            </div>
+            <div class="modal-body">
+                <div class="modal-loader" id="modal-loader">
+                    <div class="spinner"></div>
+                    <p>Loading application form...</p>
+                </div>
+                <!-- Embedded Google Form (lazy-loaded: src set on first open) -->
+                <iframe id="apply-iframe" data-src="https://docs.google.com/forms/d/e/1FAIpQLScn-uFX897-RdOEw8bmTIdewOAckLwgTy7C5g-fT1PxUwUspg/viewform?embedded=true" width="100%" height="600" frameborder="0" marginheight="0" marginwidth="0" title="NITA Consulting Club Application Form">Loading…</iframe>
+            </div>
+            <div class="modal-footer">
+                <p class="modal-footer-note">Having trouble loading? <a href="https://docs.google.com/forms/d/e/1FAIpQLScn-uFX897-RdOEw8bmTIdewOAckLwgTy7C5g-fT1PxUwUspg/viewform" target="_blank" class="modal-external-link">Open Form in New Tab</a></p>
+            </div>
+        </div>
+    </div>
 
     <!-- Scripts -->
     <script src="script.js"></script>
