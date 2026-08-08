@@ -923,71 +923,105 @@ body.modal-open {
     }
 }
 
-/* Mobile Responsive - Full Circle Layout matching reference */
+/* Mobile Responsive - Full Circle + Cross with horizontal midline items */
 @media (max-width: 768px) {
     .why-diagram-wrapper {
         max-width: 100%;
-        padding: 0 1rem;
+        padding: 0;
+        overflow: visible;
     }
 
-    /* Fixed height diagram container for absolute positioning */
+    /* Fixed height container — all children absolutely positioned */
     .why-diagram {
         position: relative;
         width: 100%;
-        height: 560px;
+        height: 520px;
         margin-bottom: 2rem;
     }
 
-    /* Hide desktop SVG, show mobile SVG */
+    /* Hide desktop SVG arcs */
     .diagram-svg {
         display: none;
     }
+
+    /* Show mobile SVG — full circle + cross, sized to fill mobile width */
     .diagram-svg-mobile {
         display: block !important;
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        width: 290px;
-        height: 290px;
+        width: 70vw;
+        max-width: 320px;
+        height: 70vw;
+        max-height: 320px;
         z-index: 1;
     }
 
-    /* "Learn the Skill" — top, centered above circle */
+    /* "Learn the Skill" — top center, above circle */
     .label-left {
         position: absolute;
         left: 50%;
-        top: 18px;
+        top: 10px;
         transform: translateX(-50%);
         text-align: center;
         align-items: center;
         width: auto;
+        white-space: nowrap;
     }
 
-    /* "Make Impact" — bottom, centered below circle */
+    .label-left .pill-italic {
+        font-size: 2rem;
+    }
+
+    /* "Make Impact" — bottom center, below circle */
     .label-right {
         position: absolute !important;
         left: 50%;
         top: auto;
-        bottom: 10px;
+        bottom: 5px;
         right: auto;
         transform: translateX(-50%);
         text-align: center;
         align-items: center;
         width: auto;
+        white-space: nowrap;
     }
 
-    /* Top node — Problem Solving / Case Competitions — upper quarter inside circle */
+    .label-right .pill-italic {
+        font-size: 2rem;
+    }
+
+    /* All nodes: shared base styles */
+    .oval-node {
+        background-color: transparent;
+        z-index: 2;
+        padding: 0.3rem 0.5rem;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .oval-node .node-title-muted {
+        font-size: 0.7rem;
+    }
+
+    .oval-node .node-title-bold {
+        font-size: 0.95rem;
+    }
+
+    /* LEFT node — Problem Solving / Case Competitions */
     .node-top {
         position: absolute !important;
-        left: 50%;
-        top: 190px;
+        left: 20%;
+        top: 50%;
         transform: translate(-50%, -50%) !important;
         text-align: center;
         align-items: center;
+        width: 35%;
+        padding: 0;
     }
 
-    /* Center node — Get Top Tier / Placements */
+    /* CENTER node — Get Top Tier / Placements */
     .node-center {
         position: absolute !important;
         left: 50%;
@@ -996,25 +1030,19 @@ body.modal-open {
         text-align: center;
         align-items: center;
         padding: 0;
+        width: 35%;
     }
 
-    /* Bottom node — Build Leadership & Network — lower quarter inside circle */
+    /* RIGHT node — Build Leadership & Network */
     .node-bottom {
         position: absolute !important;
-        left: 50%;
-        top: 375px;
+        left: 80%;
+        top: 50%;
         transform: translate(-50%, -50%) !important;
         text-align: center;
         align-items: center;
-    }
-
-    /* All nodes */
-    .oval-node {
-        background-color: transparent;
-        z-index: 2;
-        padding: 0.4rem 0.8rem;
-        display: flex;
-        flex-direction: column;
+        width: 35%;
+        padding: 0;
     }
 
     .logo-marquee-card {
