@@ -1088,6 +1088,63 @@ body.modal-open {
     .logo-marquee-card {
         padding: 1.5rem 0.5rem;
     }
+
+    /* MECE Framework Mobile Accordion */
+    .level-branches {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .tree-branch {
+        background: rgba(9, 26, 56, 0.4);
+        border: 1px solid rgba(242, 239, 233, 0.05);
+        border-radius: 6px;
+        overflow: hidden;
+    }
+
+    .node-branch {
+        margin-bottom: 0;
+        border: none;
+        background: transparent;
+        box-shadow: none;
+        border-radius: 0;
+        padding: 1.5rem;
+    }
+
+    .node-branch:hover, .node-branch.active {
+        background: rgba(13, 40, 87, 0.4);
+        border: none;
+        box-shadow: none;
+        transform: none;
+    }
+
+    .sub-nodes {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1), padding 0.5s ease;
+        padding: 0 1.5rem;
+        background: rgba(0, 0, 0, 0.2);
+    }
+
+    .tree-branch.expanded .sub-nodes {
+        max-height: 1000px; /* arbitrary large value for accordion */
+        padding: 1rem 1.5rem 1.5rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .tree-branch .expand-hint {
+        display: block;
+        margin-top: 0.8rem;
+        font-size: 0.8rem;
+        color: #3cbbf5;
+        transition: transform 0.3s ease;
+    }
+
+    .tree-branch.expanded .expand-hint {
+        transform: rotate(90deg);
+        transform-origin: center;
+        display: inline-block;
+    }
 }
 
 

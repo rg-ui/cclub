@@ -96,6 +96,21 @@ document.addEventListener('DOMContentLoaded', () => {
                 treeNodes.forEach(n => n.classList.remove('active'));
                 node.classList.add('active');
 
+                // Mobile Accordion Logic
+                if (window.innerWidth <= 768) {
+                    if (node.classList.contains('node-branch')) {
+                        const branch = node.closest('.tree-branch');
+                        if (branch.classList.contains('expanded')) {
+                            branch.classList.remove('expanded');
+                        } else {
+                            document.querySelectorAll('.tree-branch').forEach(b => b.classList.remove('expanded'));
+                            branch.classList.add('expanded');
+                        }
+                    } else if (node.classList.contains('node-root')) {
+                        document.querySelectorAll('.tree-branch').forEach(b => b.classList.remove('expanded'));
+                    }
+                }
+
                 const title = node.getAttribute('data-title') || node.querySelector('h3, h4, h5')?.innerText;
                 const detail = node.getAttribute('data-detail') || 'Deep dive analytical framework node for case problem solving.';
 
