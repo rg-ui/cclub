@@ -958,6 +958,18 @@ body.modal-open {
         z-index: 1;
     }
 
+    .draw-anim {
+        stroke-dasharray: 250;
+        stroke-dashoffset: 250;
+        animation: drawLine 2.5s cubic-bezier(0.4, 0, 0.2, 1) infinite alternate;
+    }
+
+    @keyframes drawLine {
+        to {
+            stroke-dashoffset: 0;
+        }
+    }
+
     /* "Learn the Skill" — top center, above circle */
     .label-left {
         position: absolute;

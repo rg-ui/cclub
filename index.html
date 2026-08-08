@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap" rel="stylesheet">
     
     <!-- CSS -->
-    <link rel="stylesheet" href="style.css?v=17">
+    <link rel="stylesheet" href="style.css?v=18">
 </head>
 <body>
 
@@ -135,17 +135,20 @@
                         <path d="M 490 260 A 220 110 0 0 0 600 150" stroke="rgba(255, 255, 255, 0.15)" stroke-width="1"/>
                     </svg>
 
-                    <!-- Mobile SVG: Full circle + vertical line (Blue Top / Grey Bottom) with physical gaps for text -->
+                    <!-- Mobile SVG: Full circle + vertical line with draw animations -->
                     <svg class="diagram-svg-mobile" viewBox="0 0 340 340" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <!-- Bottom Half Arc (Grey) - Gap at y=150 to y=190 -->
-                        <path d="M 298.45 190 A 130 130 0 0 1 41.55 190" stroke="rgba(255,255,255,0.15)" stroke-width="2"/>
-                        <!-- Top Half Arc (Blue) -->
-                        <path d="M 41.55 150 A 130 130 0 0 1 298.45 150" stroke="#0099ff" stroke-width="2"/>
+                        <!-- Bottom Half Arcs (Grey) - start at bottom center (170,300), draw up -->
+                        <path class="draw-anim" d="M 170 300 A 130 130 0 0 1 41.55 190" stroke="rgba(255,255,255,0.15)" stroke-width="2"/>
+                        <path class="draw-anim" d="M 170 300 A 130 130 0 0 0 298.45 190" stroke="rgba(255,255,255,0.15)" stroke-width="2"/>
                         
-                        <!-- Vertical Line Bottom (Grey) - Gap at center y=140 to y=200 -->
-                        <line x1="170" y1="200" x2="170" y2="300" stroke="rgba(255,255,255,0.15)" stroke-width="2"/>
-                        <!-- Vertical Line Top (Blue) -->
-                        <line x1="170" y1="40" x2="170" y2="140" stroke="#0099ff" stroke-width="2"/>
+                        <!-- Top Half Arcs (Blue) - start at top center (170,40), draw down -->
+                        <path class="draw-anim" d="M 170 40 A 130 130 0 0 0 41.55 150" stroke="#0099ff" stroke-width="2"/>
+                        <path class="draw-anim" d="M 170 40 A 130 130 0 0 1 298.45 150" stroke="#0099ff" stroke-width="2"/>
+                        
+                        <!-- Vertical Line Bottom (Grey) - start at bottom center (170,300), draw up to 200 -->
+                        <line class="draw-anim" x1="170" y1="300" x2="170" y2="200" stroke="rgba(255,255,255,0.15)" stroke-width="2"/>
+                        <!-- Vertical Line Top (Blue) - start at top center (170,40), draw down to 140 -->
+                        <line class="draw-anim" x1="170" y1="40" x2="170" y2="140" stroke="#0099ff" stroke-width="2"/>
                     </svg>
 
                     <!-- Diagram Nodes (top, center, bottom of ellipse) -->
