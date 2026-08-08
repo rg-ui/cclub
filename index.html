@@ -8,10 +8,10 @@
     <!-- Fonts: Serif for Headings, Sans-Serif for Body -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap" rel="stylesheet">
     
     <!-- CSS -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=13">
 </head>
 <body>
 
@@ -40,9 +40,10 @@
             </a>
             <ul class="nav-links">
                 <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#why-consulting" class="nav-link">Why Consulting</a></li>
                 <li><a href="#services" class="nav-link">Practice Areas</a></li>
                 <li><a href="#teams" class="nav-link">Core</a></li>
-                <li><a href="#challenge" class="nav-link">Engagements</a></li>
+                <li><a href="#framework" class="nav-link">Framework</a></li>
             </ul>
             <a href="#apply" class="button btn-join btn-apply-trigger">Join Us</a>
             <div class="hamburger">
@@ -109,6 +110,176 @@
         </div>
     </section>
 
+    <!-- Why Consulting Section (Tharun Speaks Replica) -->
+    <section class="why-consulting section-padding" id="why-consulting">
+        <div class="container reveal fade-up">
+            <!-- Massive Outline Background Text -->
+            <div class="why-watermark">WHY CONSULTING?</div>
+
+            <div class="why-diagram-wrapper">
+                <!-- Diagram Container -->
+                <div class="why-diagram">
+                    <!-- Left Label: "Learn the Skill" — outside ellipse on desktop, top on mobile -->
+                    <div class="diagram-pill label-left">
+                        <span class="pill-label">Learn the</span>
+                        <span class="pill-italic">Skill</span>
+                    </div>
+
+                    <!-- Desktop SVG: Semicircular Ellipse arcs -->
+                    <svg class="diagram-svg" viewBox="0 0 800 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M 200 150 A 220 110 0 0 1 310 40" stroke="rgba(255, 255, 255, 0.15)" stroke-width="1"/>
+                        <path d="M 490 40 A 220 110 0 0 1 600 150" stroke="rgba(255, 255, 255, 0.15)" stroke-width="1"/>
+                        <path d="M 200 150 L 330 150" stroke="rgba(255, 255, 255, 0.15)" stroke-width="1"/>
+                        <path d="M 470 150 L 600 150" stroke="rgba(255, 255, 255, 0.15)" stroke-width="1"/>
+                        <path d="M 200 150 A 220 110 0 0 0 310 260" stroke="rgba(255, 255, 255, 0.15)" stroke-width="1"/>
+                        <path d="M 490 260 A 220 110 0 0 0 600 150" stroke="rgba(255, 255, 255, 0.15)" stroke-width="1"/>
+                    </svg>
+
+                    <!-- Mobile SVG: Full circle + cross lines -->
+                    <svg class="diagram-svg-mobile" viewBox="0 0 340 340" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="170" cy="170" r="130" stroke="rgba(255,255,255,0.13)" stroke-width="1"/>
+                        <line x1="170" y1="40" x2="170" y2="300" stroke="rgba(255,255,255,0.13)" stroke-width="1"/>
+                        <line x1="40" y1="170" x2="300" y2="170" stroke="rgba(255,255,255,0.13)" stroke-width="1"/>
+                    </svg>
+
+                    <!-- Diagram Nodes (top, center, bottom of ellipse) -->
+                    <div class="oval-node node-top">
+                        <span class="node-title-muted">Problem Solving /</span>
+                        <span class="node-title-bold">Case Competitions</span>
+                    </div>
+                    <div class="oval-node node-center">
+                        <span class="node-title-muted">Get Top Tier</span>
+                        <span class="node-title-bold">Placements</span>
+                    </div>
+                    <div class="oval-node node-bottom">
+                        <span class="node-title-muted">Build Leadership &</span>
+                        <span class="node-title-bold">Network</span>
+                    </div>
+
+                    <!-- Right Label: "Make Impact" — outside ellipse on desktop, bottom on mobile -->
+                    <div class="diagram-pill label-right">
+                        <span class="pill-highlight">Make</span>
+                        <span class="pill-italic highlight-italic">Impact</span>
+                    </div>
+                </div>
+
+                <!-- Animated Top Consulting Logos Marquee Box -->
+                <div class="logo-marquee-card">
+                    <h3 class="marquee-title">TARGET RECRUITERS & INDUSTRY ALUMNI NETWORK</h3>
+                    
+                    <div class="marquee-container">
+                        <!-- Row 1: Left to Right -->
+                        <div class="marquee-track track-forward">
+                            <div class="logo-item">
+                                <svg class="brand-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                                <span>McKinsey & Company</span>
+                            </div>
+                            <div class="logo-item">
+                                <svg class="brand-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M3 3h18v18H3V3zm4 4v10h4V7H7zm6 0v10h4V7h-4z"/></svg>
+                                <span>BCG</span>
+                            </div>
+                            <div class="logo-item">
+                                <svg class="brand-icon" viewBox="0 0 24 24" fill="currentColor"><polygon points="12,2 22,22 2,22"/></svg>
+                                <span>Bain & Company</span>
+                            </div>
+                            <div class="logo-item">
+                                <svg class="brand-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12.48 10.92v3.28h7.84c-.24 1.84-.853 3.187-1.787 4.133-1.147 1.147-2.933 2.4-6.053 2.4-4.827 0-8.6-3.893-8.6-8.72s3.773-8.72 8.6-8.72c2.6 0 4.507 1.027 5.907 2.347l2.307-2.307C18.747 1.44 16.133 0 12.48 0 5.867 0 .307 5.387.307 12s5.56 12 12.173 12c3.573 0 6.267-1.173 8.373-3.36 2.16-2.16 2.84-5.213 2.84-7.667 0-.76-.053-1.467-.173-2.053H12.48z"/></svg>
+                                <span>Google</span>
+                            </div>
+                            <div class="logo-item">
+                                <svg class="brand-icon" viewBox="0 0 24 24" fill="currentColor"><path d="m.66 16.95 13.242-4.926L.66 6.852V0l22.68 9.132v5.682L.66 24Z"/></svg>
+                                <span>Accenture</span>
+                            </div>
+                            <div class="logo-item">
+                                <svg class="brand-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L2 22h20L12 2zm0 5l6.5 13h-13L12 7z"/></svg>
+                                <span>Oliver Wyman</span>
+                            </div>
+                            <!-- Duplicate Loop -->
+                            <div class="logo-item">
+                                <svg class="brand-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                                <span>McKinsey & Company</span>
+                            </div>
+                            <div class="logo-item">
+                                <svg class="brand-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M3 3h18v18H3V3zm4 4v10h4V7H7zm6 0v10h4V7h-4z"/></svg>
+                                <span>BCG</span>
+                            </div>
+                            <div class="logo-item">
+                                <svg class="brand-icon" viewBox="0 0 24 24" fill="currentColor"><polygon points="12,2 22,22 2,22"/></svg>
+                                <span>Bain & Company</span>
+                            </div>
+                            <div class="logo-item">
+                                <svg class="brand-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12.48 10.92v3.28h7.84c-.24 1.84-.853 3.187-1.787 4.133-1.147 1.147-2.933 2.4-6.053 2.4-4.827 0-8.6-3.893-8.6-8.72s3.773-8.72 8.6-8.72c2.6 0 4.507 1.027 5.907 2.347l2.307-2.307C18.747 1.44 16.133 0 12.48 0 5.867 0 .307 5.387.307 12s5.56 12 12.173 12c3.573 0 6.267-1.173 8.373-3.36 2.16-2.16 2.84-5.213 2.84-7.667 0-.76-.053-1.467-.173-2.053H12.48z"/></svg>
+                                <span>Google</span>
+                            </div>
+                            <div class="logo-item">
+                                <svg class="brand-icon" viewBox="0 0 24 24" fill="currentColor"><path d="m.66 16.95 13.242-4.926L.66 6.852V0l22.68 9.132v5.682L.66 24Z"/></svg>
+                                <span>Accenture</span>
+                            </div>
+                            <div class="logo-item">
+                                <svg class="brand-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L2 22h20L12 2zm0 5l6.5 13h-13L12 7z"/></svg>
+                                <span>Oliver Wyman</span>
+                            </div>
+                        </div>
+
+                        <!-- Row 2: Right to Left -->
+                        <div class="marquee-track track-reverse">
+                            <div class="logo-item">
+                                <svg class="brand-icon" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="7"/><circle cx="18" cy="18" r="2.5" fill="#e8ff47"/></svg>
+                                <span>Deloitte Strategy</span>
+                            </div>
+                            <div class="logo-item">
+                                <svg class="brand-icon" viewBox="0 0 24 24" fill="currentColor"><rect x="3" y="3" width="8" height="8"/><rect x="13" y="3" width="8" height="8"/><rect x="3" y="13" width="8" height="8"/><rect x="13" y="13" width="8" height="8" fill="#e8ff47"/></svg>
+                                <span>PwC Strategy&</span>
+                            </div>
+                            <div class="logo-item">
+                                <svg class="brand-icon" viewBox="0 0 24 24" fill="currentColor"><polygon points="12,2 20,9 17,20 7,20 4,9"/></svg>
+                                <span>EY-Parthenon</span>
+                            </div>
+                            <div class="logo-item">
+                                <svg class="brand-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M4 4h4v16H4V4zm6 0h4v16h-4V4zm6 0h4v16h-4V4z"/></svg>
+                                <span>KPMG Advisory</span>
+                            </div>
+                            <div class="logo-item">
+                                <svg class="brand-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M6.915 4.03c-1.968 0-3.683 1.28-4.871 3.113C.704 9.208 0 11.883 0 14.449c0 .706.07 1.369.21 1.973a6.624 6.624 0 0 0 .265.86 5.297 5.297 0 0 0 .371.761c.696 1.159 1.818 1.927 3.593 1.927 1.497 0 2.633-.671 3.965-2.444.76-1.012 1.144-1.626 2.663-4.32l.756-1.339.186-.325c.061.1.121.196.183.3l2.152 3.595c.724 1.21 1.665 2.556 2.47 3.314 1.046.987 1.992 1.22 3.06 1.22 1.075 0 1.876-.355 2.455-.843a3.743 3.743 0 0 0 .81-.973c.542-.939.861-2.127.861-3.745 0-2.72-.681-5.357-2.084-7.45-1.282-1.912-2.957-2.93-4.716-2.93-1.047 0-2.088.467-3.053 1.308-.652.57-1.257 1.29-1.82 2.05-.69-.875-1.335-1.547-1.958-2.056-1.182-.966-2.315-1.303-3.454-1.303z"/></svg>
+                                <span>Meta</span>
+                            </div>
+                            <div class="logo-item">
+                                <svg class="brand-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701"/></svg>
+                                <span>Apple</span>
+                            </div>
+                            <!-- Duplicate Loop -->
+                            <div class="logo-item">
+                                <svg class="brand-icon" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="7"/><circle cx="18" cy="18" r="2.5" fill="#e8ff47"/></svg>
+                                <span>Deloitte Strategy</span>
+                            </div>
+                            <div class="logo-item">
+                                <svg class="brand-icon" viewBox="0 0 24 24" fill="currentColor"><rect x="3" y="3" width="8" height="8"/><rect x="13" y="3" width="8" height="8"/><rect x="3" y="13" width="8" height="8"/><rect x="13" y="13" width="8" height="8" fill="#e8ff47"/></svg>
+                                <span>PwC Strategy&</span>
+                            </div>
+                            <div class="logo-item">
+                                <svg class="brand-icon" viewBox="0 0 24 24" fill="currentColor"><polygon points="12,2 20,9 17,20 7,20 4,9"/></svg>
+                                <span>EY-Parthenon</span>
+                            </div>
+                            <div class="logo-item">
+                                <svg class="brand-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M4 4h4v16H4V4zm6 0h4v16h-4V4zm6 0h4v16h-4V4z"/></svg>
+                                <span>KPMG Advisory</span>
+                            </div>
+                            <div class="logo-item">
+                                <svg class="brand-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M6.915 4.03c-1.968 0-3.683 1.28-4.871 3.113C.704 9.208 0 11.883 0 14.449c0 .706.07 1.369.21 1.973a6.624 6.624 0 0 0 .265.86 5.297 5.297 0 0 0 .371.761c.696 1.159 1.818 1.927 3.593 1.927 1.497 0 2.633-.671 3.965-2.444.76-1.012 1.144-1.626 2.663-4.32l.756-1.339.186-.325c.061.1.121.196.183.3l2.152 3.595c.724 1.21 1.665 2.556 2.47 3.314 1.046.987 1.992 1.22 3.06 1.22 1.075 0 1.876-.355 2.455-.843a3.743 3.743 0 0 0 .81-.973c.542-.939.861-2.127.861-3.745 0-2.72-.681-5.357-2.084-7.45-1.282-1.912-2.957-2.93-4.716-2.93-1.047 0-2.088.467-3.053 1.308-.652.57-1.257 1.29-1.82 2.05-.69-.875-1.335-1.547-1.958-2.056-1.182-.966-2.315-1.303-3.454-1.303z"/></svg>
+                                <span>Meta</span>
+                            </div>
+                            <div class="logo-item">
+                                <svg class="brand-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701"/></svg>
+                                <span>Apple</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
     <!-- Services Section -->
     <section class="services section-padding" id="services">
         <div class="container">
@@ -146,74 +317,94 @@
         </div>
     </section>
 
-    <!-- Interactive Case Teaser -->
-    <section class="case-teaser section-padding" id="challenge">
+    <!-- The Interactive MECE Problem-Solving Tree Section -->
+    <section class="tree-section section-padding" id="framework">
         <div class="container reveal fade-up">
-            <div class="teaser-card">
-                <div class="teaser-header">
-                    <span class="teaser-badge">Guesstimate Challenge</span>
-                    <h2 class="teaser-title">How many ping-pong balls can fit in a Boeing 747?</h2>
-                </div>
-                <div class="teaser-body">
-                    <p>Test your consulting acumen. It's not about knowing the exact number, it's about your approach to structuring a complex, ambiguous problem.</p>
-                    <button class="button btn-accent" id="reveal-btn">Reveal The Framework</button>
-                </div>
-                <div class="teaser-solution" id="teaser-solution" style="display: none;">
-                    <div class="framework-step">
-                        <div class="step-num">01</div>
-                        <div class="step-desc">
-                            <h4>Calculate Volume of 747</h4>
-                            <p>Assume passenger cabin is a cylinder: V = πr²h. Estimate length and radius.</p>
-                        </div>
-                    </div>
-                    <div class="framework-step">
-                        <div class="step-num">02</div>
-                        <div class="step-desc">
-                            <h4>Calculate Volume of Ball</h4>
-                            <p>Standard ball is ~40mm diameter. Calculate spherical volume.</p>
-                        </div>
-                    </div>
-                    <div class="framework-step">
-                        <div class="step-num">03</div>
-                        <div class="step-desc">
-                            <h4>Account for Packing Fraction</h4>
-                            <p>Spheres don't pack perfectly. Multiply total available volume by ~70-74%.</p>
-                        </div>
-                    </div>
-                </div>
+            <div class="section-header text-center">
+                <span class="section-badge">McKinsey & BCG Methodology</span>
+                <h2 class="section-title">The MECE Problem-Solving Tree</h2>
+                <p class="section-subtitle">
+                    How MBB consultants deconstruct complex corporate ambiguity. Click any branch or node below to inspect the framework breakdown.
+                </p>
             </div>
-        </div>
-    </section>
 
-    <!-- Consultant's Toolkit Section -->
-    <section class="toolkit section-padding" id="toolkit">
-        <div class="container">
-            <div class="section-header text-center reveal fade-up">
-                <h2 class="section-title">The Consultant's Toolkit</h2>
-                <p class="section-subtitle" style="margin-top: 1rem;">What you actually learn when you join the elite.</p>
-            </div>
-            
-            <div class="toolkit-grid cols-4 gap-sm reveal fade-up">
-                <div class="toolkit-card">
-                    <div class="toolkit-icon">MECE</div>
-                    <h3>MECE Principle</h3>
-                    <p>Structuring problems so they are Mutually Exclusive and Collectively Exhaustive.</p>
+            <!-- The Issue Tree Graphic Box -->
+            <div class="issue-tree-card">
+                
+                <!-- Root Node (Level 0) -->
+                <div class="tree-level level-root">
+                    <div class="tree-node node-root active" data-title="Target Problem Formulation" data-detail="Deconstructing an EV Startup's 15% margin erosion into Mutually Exclusive & Collectively Exhaustive (MECE) branches to isolate exact operational drivers.">
+                        <div class="node-badge">CASE OBJECTIVE</div>
+                        <h3 class="node-heading">EV Startup Profit Margin Decline (-15%)</h3>
+                        <p class="node-caption">Root Case: Deconstructing profit erosion into MECE drivers.</p>
+                    </div>
                 </div>
-                <div class="toolkit-card">
-                    <div class="toolkit-icon">80/20</div>
-                    <h3>Pareto Analysis</h3>
-                    <p>Identifying the 20% of drivers that create 80% of the impact in any business.</p>
+
+                <!-- Vertical Connector Line from Root -->
+                <div class="tree-connector-line"></div>
+
+                <!-- Level 1 Branches -->
+                <div class="tree-level level-branches">
+                    <!-- Branch 1: Revenue -->
+                    <div class="tree-branch branch-revenue">
+                        <div class="tree-node node-branch" data-title="Revenue Drivers (Top-Line Analytics)" data-detail="Evaluating unit price realization and sales volume distribution across B2B enterprise fleets vs B2C retail customers.">
+                            <div class="branch-tag tag-revenue">📈 REVENUE DRIVERS</div>
+                            <h4>Top-Line Analytics</h4>
+                            <span class="expand-hint">Inspect Branch →</span>
+                        </div>
+
+                        <!-- Sub-branches (Level 2) -->
+                        <div class="sub-nodes">
+                            <div class="tree-node node-sub" data-title="Price Realization & Tiering" data-detail="Analyzing price elasticity, dynamic subscription tiers, and unit margin expansion. Formula: Revenue = Volume × Average Selling Price (ASP).">
+                                <h5>1.1 Price Realization</h5>
+                                <p>ASP & Discounting</p>
+                            </div>
+                            <div class="tree-node node-sub" data-title="Volume & Market Penetration" data-detail="Tracking customer acquisition cost (CAC), LTV, churn rate, and fleet sales volume. 80/20 Rule: 20% of fleet enterprise clients drive 80% volume.">
+                                <h5>1.2 Sales Volume & Mix</h5>
+                                <p>B2B vs B2C Channels</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Branch 2: Cost -->
+                    <div class="tree-branch branch-cost">
+                        <div class="tree-node node-branch" data-title="Cost Structure (Bottom-Line Optimization)" data-detail="Isolating fixed R&D amortization from variable battery cell sourcing and logistics overhead to optimize cost baseline.">
+                            <div class="branch-tag tag-cost">📉 COST STRUCTURE</div>
+                            <h4>Bottom-Line Optimization</h4>
+                            <span class="expand-hint">Inspect Branch →</span>
+                        </div>
+
+                        <!-- Sub-branches (Level 2) -->
+                        <div class="sub-nodes">
+                            <div class="tree-node node-sub" data-title="Fixed Overhead Amortization" data-detail="R&D amortization, assembly plant lease optimization, and SG&A overhead reduction using Zero-Based Budgeting (ZBB).">
+                                <h5>2.1 Fixed Overhead</h5>
+                                <p>R&D & SG&A Costs</p>
+                            </div>
+                            <div class="tree-node node-sub" data-title="Variable COGS & Battery Supply" data-detail="Lithium-ion cell sourcing costs, assembly logistics, and scrap rate reduction. Pareto Analysis isolates top 3 supplier cost spikes.">
+                                <h5>2.2 Variable Operations</h5>
+                                <p>COGS & Supply Chain</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="toolkit-card">
-                    <div class="toolkit-icon">FM</div>
-                    <h3>Financial Modeling</h3>
-                    <p>Building robust DCF models and analyzing P&L statements for valuation.</p>
+
+                <!-- Active Node Deep Dive Inspector Box -->
+                <div class="tree-inspector-box" id="tree-inspector">
+                    <div class="inspector-header">
+                        <span class="inspector-tag" id="inspector-tag">ACTIVE FRAMEWORK ANALYSIS</span>
+                        <h4 id="inspector-title">Target Problem Formulation</h4>
+                    </div>
+                    <p id="inspector-desc">
+                        Deconstructing an EV Startup's 15% margin erosion into Mutually Exclusive & Collectively Exhaustive (MECE) branches to isolate exact operational drivers.
+                    </p>
+                    <div class="inspector-tools">
+                        <span class="tool-chip">Mutually Exclusive</span>
+                        <span class="tool-chip">Collectively Exhaustive</span>
+                        <span class="tool-chip">80/20 Pareto</span>
+                        <span class="tool-chip">Financial Modeling</span>
+                    </div>
                 </div>
-                <div class="toolkit-card">
-                    <div class="toolkit-icon">UI</div>
-                    <h3>Executive Slides</h3>
-                    <p>Crafting MBB-style presentations that synthesize complex data into a clear narrative.</p>
-                </div>
+
             </div>
         </div>
     </section>

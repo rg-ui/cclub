@@ -85,29 +85,32 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
-    // 5. Interactive Case Teaser
-    const revealBtn = document.getElementById('reveal-btn');
-    const teaserSolution = document.getElementById('teaser-solution');
-    
-    if (revealBtn && teaserSolution) {
-        revealBtn.addEventListener('click', () => {
-            if (teaserSolution.style.display === 'none' || teaserSolution.style.display === '') {
-                teaserSolution.style.display = 'block';
-                revealBtn.innerText = 'Hide The Framework';
-                
-                // Simple fade-in effect
-                teaserSolution.style.opacity = 0;
+    // 5. Interactive MECE Issue Tree Inspector
+    const treeNodes = document.querySelectorAll('.tree-node');
+    const inspectorTitle = document.getElementById('inspector-title');
+    const inspectorDesc = document.getElementById('inspector-desc');
+
+    if (treeNodes.length > 0 && inspectorTitle && inspectorDesc) {
+        treeNodes.forEach(node => {
+            node.addEventListener('click', () => {
+                treeNodes.forEach(n => n.classList.remove('active'));
+                node.classList.add('active');
+
+                const title = node.getAttribute('data-title') || node.querySelector('h3, h4, h5')?.innerText;
+                const detail = node.getAttribute('data-detail') || 'Deep dive analytical framework node for case problem solving.';
+
+                inspectorTitle.style.opacity = '0';
+                inspectorDesc.style.opacity = '0';
+
                 setTimeout(() => {
-                    teaserSolution.style.transition = 'opacity 0.4s ease';
-                    teaserSolution.style.opacity = 1;
-                }, 10);
-            } else {
-                teaserSolution.style.opacity = 0;
-                setTimeout(() => {
-                    teaserSolution.style.display = 'none';
-                    revealBtn.innerText = 'Reveal The Framework';
-                }, 400);
-            }
+                    inspectorTitle.innerText = title;
+                    inspectorDesc.innerText = detail;
+                    inspectorTitle.style.transition = 'opacity 0.2s ease';
+                    inspectorDesc.style.transition = 'opacity 0.2s ease';
+                    inspectorTitle.style.opacity = '1';
+                    inspectorDesc.style.opacity = '1';
+                }, 150);
+            });
         });
     }
 

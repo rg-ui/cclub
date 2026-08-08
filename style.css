@@ -157,160 +157,250 @@ h1, h2, h3, h4, .logo-text { font-family: var(--font-heading); font-weight: 500;
 .service-card h3 { font-family: var(--font-body); font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 1.5rem; font-weight: 600; }
 .service-card p { font-size: 0.85rem; color: var(--text-secondary); line-height: 1.7; }
 
-/* Interactive Case Teaser Redesign */
-.case-teaser { 
-    background: radial-gradient(circle at top right, rgba(60, 187, 245, 0.08), transparent 50%), var(--bg-primary); 
-    border-bottom: 1px solid var(--border-color); 
+/* ==========================================================================
+   Interactive MECE Problem-Solving Tree Section
+   ========================================================================== */
+.tree-section {
+    background: var(--bg-primary);
+    border-bottom: 1px solid var(--border-color);
     position: relative;
-}
-.teaser-card { 
-    max-width: 850px; 
-    margin: 0 auto; 
-    background: linear-gradient(180deg, rgba(30, 35, 45, 0.8) 0%, rgba(20, 24, 32, 0.9) 100%);
-    border: 1px solid rgba(255, 255, 255, 0.1); 
-    padding: 5rem 4rem; 
-    text-align: center; 
-    border-radius: 16px; 
-    box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5); 
-    position: relative;
-    overflow: hidden;
-}
-.teaser-card::before {
-    content: '';
-    position: absolute;
-    top: 0; left: 0; right: 0; height: 4px;
-    background: linear-gradient(90deg, #3cbbf5, #0d5ba6);
-}
-.teaser-badge { 
-    display: inline-block; 
-    font-size: 0.8rem; 
-    text-transform: uppercase; 
-    letter-spacing: 3px; 
-    color: #3cbbf5; 
-    margin-bottom: 1.5rem; 
-    font-weight: 600;
-}
-.teaser-title { 
-    font-size: 2.8rem; 
-    margin-bottom: 1.5rem; 
-    line-height: 1.2; 
-    font-family: var(--font-heading);
-}
-.teaser-body p { 
-    color: var(--text-secondary); 
-    margin-bottom: 3rem; 
-    font-size: 1.15rem; 
-    line-height: 1.8; 
-    max-width: 650px; 
-    margin-left: auto; 
-    margin-right: auto; 
-}
-.btn-accent {
-    background: #3cbbf5;
-    color: #000;
-    font-weight: 600;
-    border: none;
-    border-radius: 30px;
-    padding: 1rem 2.5rem;
-    box-shadow: 0 10px 20px rgba(60, 187, 245, 0.2);
-}
-.btn-accent:hover {
-    background: #fff;
-    color: #000;
-    transform: translateY(-2px);
-    box-shadow: 0 15px 25px rgba(255, 255, 255, 0.15);
-}
-.teaser-solution { 
-    margin-top: 3.5rem; 
-    text-align: left; 
-    border-top: 1px solid rgba(255,255,255,0.08); 
-    padding-top: 3rem; 
-}
-.framework-step { 
-    display: flex; 
-    gap: 1.5rem; 
-    margin-bottom: 1.5rem; 
-    background: rgba(0,0,0,0.25);
-    padding: 1.5rem;
-    border-radius: 8px;
-    border-left: 3px solid #3cbbf5;
-}
-.step-num { 
-    font-family: var(--font-heading); 
-    font-size: 1.8rem; 
-    color: rgba(255,255,255,0.15); 
-    font-weight: 700; 
-    line-height: 1;
-}
-.step-desc h4 { 
-    font-family: var(--font-body); 
-    font-size: 1.15rem; 
-    margin-bottom: 0.5rem; 
-    color: #fff;
-}
-.step-desc p { 
-    color: var(--text-secondary); 
-    font-size: 0.95rem; 
-    margin-bottom: 0; 
-    line-height: 1.6;
 }
 
-/* Consultant's Toolkit Redesign */
-.toolkit { 
-    background: #0d0e12; 
-    border-bottom: 1px solid var(--border-color); 
+.issue-tree-card {
+    margin-top: 4rem;
+    background: linear-gradient(180deg, rgba(9, 26, 56, 0.45) 0%, rgba(4, 12, 26, 0.85) 100%);
+    border: 1px solid rgba(242, 239, 233, 0.08);
+    border-radius: 4px;
+    padding: 3.5rem 2.5rem;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
 }
-.toolkit .section-subtitle {
-    color: #3cbbf5;
-    text-transform: uppercase;
+
+/* Root Level 0 */
+.level-root {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.node-root {
+    max-width: 520px;
+    width: 100%;
+    background: linear-gradient(135deg, rgba(9, 26, 56, 0.8) 0%, rgba(13, 40, 87, 0.6) 100%);
+    border: 1.5px solid rgba(242, 239, 233, 0.2);
+    border-radius: 4px;
+    padding: 1.5rem 2rem;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.node-root:hover, .node-root.active {
+    border-color: rgba(242, 239, 233, 0.45);
+    background: linear-gradient(135deg, rgba(13, 40, 87, 0.9) 0%, rgba(9, 26, 56, 0.95) 100%);
+    box-shadow: 0 12px 35px rgba(13, 40, 87, 0.5);
+    transform: translateY(-2px);
+}
+
+.node-badge {
+    display: inline-block;
+    font-size: 0.7rem;
+    font-weight: 700;
     letter-spacing: 2px;
-    font-size: 0.8rem;
+    color: var(--text-secondary);
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+}
+
+.node-heading {
+    font-family: var(--font-heading);
+    font-size: 1.4rem;
+    color: var(--text-primary);
+    margin-bottom: 0.3rem;
+}
+
+.node-caption {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+}
+
+/* Vertical Connector Line */
+.tree-connector-line {
+    width: 1px;
+    height: 40px;
+    background: linear-gradient(180deg, rgba(242, 239, 233, 0.3), rgba(242, 239, 233, 0.05));
+    margin: 0 auto;
+}
+
+/* Level 1 Branches */
+.level-branches {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+    width: 100%;
+    margin-top: 0.5rem;
+}
+
+.tree-branch {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.node-branch {
+    background: linear-gradient(145deg, rgba(9, 26, 56, 0.5) 0%, rgba(8, 9, 11, 0.8) 100%);
+    border: 1px solid rgba(242, 239, 233, 0.07);
+    border-radius: 4px;
+    padding: 1.4rem 1.8rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.node-branch:hover, .node-branch.active {
+    background: linear-gradient(145deg, rgba(13, 40, 87, 0.7) 0%, rgba(8, 9, 11, 0.9) 100%);
+    border-color: rgba(242, 239, 233, 0.2);
+    transform: translateY(-2px);
+}
+
+.branch-tag {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    margin-bottom: 0.4rem;
+    text-transform: uppercase;
+}
+
+.tag-revenue { color: #d0e0ff; }
+.tag-cost { color: var(--text-secondary); }
+
+.node-branch h4 {
+    font-size: 1.15rem;
+    color: var(--text-primary);
     font-weight: 600;
+    margin-bottom: 0.3rem;
 }
-.toolkit-grid { 
-    margin-top: 5rem; 
+
+.expand-hint {
+    font-size: 0.75rem;
+    color: var(--text-muted);
 }
-.toolkit-card { 
-    background: linear-gradient(145deg, #181b24 0%, #12141a 100%); 
-    padding: 3.5rem 2.5rem; 
-    border: 1px solid rgba(255, 255, 255, 0.05); 
-    text-align: center; 
-    transition: var(--transition); 
-    border-radius: 12px;
+
+/* Sub Nodes (Level 2) */
+.sub-nodes {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding-left: 1rem;
+    border-left: 1px solid rgba(242, 239, 233, 0.08);
 }
-.toolkit-card:hover { 
-    transform: translateY(-10px); 
-    border-color: rgba(60, 187, 245, 0.3); 
-    box-shadow: 0 20px 40px rgba(0,0,0,0.4); 
-    background: linear-gradient(145deg, #1c202a 0%, #15181f 100%);
+
+.node-sub {
+    background: rgba(8, 9, 11, 0.7);
+    border: 1px solid rgba(242, 239, 233, 0.05);
+    border-radius: 4px;
+    padding: 1rem 1.2rem;
+    cursor: pointer;
+    transition: all 0.25s ease;
 }
-.toolkit-icon { 
-    width: 70px; 
-    height: 70px; 
-    margin: 0 auto 2rem; 
-    border-radius: 16px; 
-    background: linear-gradient(135deg, #3cbbf5 0%, #0d5ba6 100%); 
-    color: #fff; 
-    display: flex; 
-    align-items: center; 
-    justify-content: center; 
-    font-family: var(--font-heading); 
-    font-size: 1.4rem; 
-    font-weight: 700; 
-    box-shadow: 0 10px 20px rgba(13, 91, 166, 0.3);
+
+.node-sub:hover, .node-sub.active {
+    background: linear-gradient(145deg, rgba(9, 26, 56, 0.7) 0%, rgba(8, 9, 11, 0.9) 100%);
+    border-color: rgba(242, 239, 233, 0.2);
+    transform: translateX(4px);
 }
-.toolkit-card h3 { 
-    font-family: var(--font-body); 
-    font-size: 1.2rem; 
-    letter-spacing: 1px; 
-    margin-bottom: 1rem; 
-    color: #fff;
+
+.node-sub h5 {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 0.2rem;
 }
-.toolkit-card p { 
-    font-size: 0.95rem; 
-    color: var(--text-secondary); 
-    line-height: 1.7; 
+
+.node-sub p {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
 }
+
+/* Active Inspector Box */
+.tree-inspector-box {
+    margin-top: 3.5rem;
+    width: 100%;
+    background: linear-gradient(145deg, rgba(9, 26, 56, 0.6) 0%, rgba(4, 12, 26, 0.95) 100%);
+    border: 1px solid rgba(242, 239, 233, 0.1);
+    border-radius: 4px;
+    padding: 2rem;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+    transition: all 0.3s ease;
+}
+
+.inspector-header {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    margin-bottom: 1rem;
+}
+
+.inspector-tag {
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+}
+
+.inspector-header h4 {
+    font-size: 1.35rem;
+    color: var(--text-primary);
+    font-family: var(--font-heading);
+    font-weight: 500;
+    line-height: 1.3;
+}
+
+.tree-inspector-box p {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.inspector-tools {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+}
+
+.tool-chip {
+    background: transparent;
+    border: 1px solid rgba(242, 239, 233, 0.1);
+    border-radius: 0;
+    padding: 0.4rem 1rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    letter-spacing: 0.5px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .level-branches {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .issue-tree-card {
+        padding: 2rem 1.2rem;
+    }
+    
+    .sub-nodes {
+        padding-left: 0.5rem;
+    }
+}
+
 
 /* Teams (Internal Core) */
 .teams { background: #15171e; border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color);}
@@ -551,3 +641,386 @@ body.modal-open {
         padding: 1rem 1.5rem;
     }
 }
+
+/* ==========================================================================
+   Why Consulting Section (Tharun Speaks Replica)
+   ========================================================================== */
+.why-consulting {
+    position: relative;
+    background-color: var(--bg-dark);
+    padding-top: 6rem;
+    padding-bottom: 7rem;
+    overflow: hidden;
+    /* Dotted background matching reference */
+    background-image: radial-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+    background-size: 24px 24px;
+}
+
+/* Watermark Text */
+.why-watermark {
+    text-align: center;
+    font-size: clamp(3.5rem, 8vw, 7.5rem);
+    font-weight: 900;
+    font-family: var(--font-primary);
+    color: transparent;
+    -webkit-text-stroke: 1.5px rgba(255, 255, 255, 0.06);
+    letter-spacing: 0.05em;
+    line-height: 1;
+    margin-bottom: 2rem;
+    user-select: none;
+    text-transform: uppercase;
+}
+
+.why-diagram-wrapper {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 1rem;
+}
+
+/* Diagram Structure (Absolute Grid) */
+.why-diagram {
+    position: relative;
+    width: 100%;
+    height: 380px;
+    margin-bottom: 3rem;
+}
+
+/* Left & Right Text Labels */
+.diagram-pill {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    z-index: 3;
+    width: 160px;
+}
+
+.label-left {
+    left: -30px;
+    text-align: right;
+    align-items: flex-end;
+}
+
+.label-right {
+    right: -30px;
+    text-align: left;
+    align-items: flex-start;
+}
+
+.pill-label {
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.85);
+    line-height: 1.2;
+}
+
+.pill-italic {
+    font-family: var(--font-heading);
+    font-style: italic;
+    font-size: 2.5rem;
+    color: #ffffff;
+    line-height: 1.1;
+}
+
+.pill-highlight {
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: var(--text-primary);
+    line-height: 1.2;
+}
+
+.highlight-italic {
+    color: var(--text-primary);
+}
+
+/* SVG Vector Semi-Ovals Diagram */
+.diagram-svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* Mobile Full Circle SVG — hidden on desktop */
+.diagram-svg-mobile {
+    display: none;
+}
+
+/* Diagram Text Nodes */
+.oval-node {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: transparent;
+    padding: 0.5rem 1.2rem;
+    z-index: 2;
+    transition: transform 0.3s ease;
+}
+
+.node-top {
+    left: 50%;
+    top: calc(50% - 120px);
+    transform: translate(-50%, -50%);
+}
+
+.node-center {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 0.6rem 1.8rem;
+}
+
+.node-bottom {
+    left: 50%;
+    top: calc(50% + 120px);
+    transform: translate(-50%, -50%);
+}
+
+.node-title-muted {
+    font-size: 1.05rem;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.55);
+    white-space: nowrap;
+    line-height: 1.35;
+}
+
+.node-title-bold {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #ffffff;
+    white-space: nowrap;
+    line-height: 1.35;
+    letter-spacing: -0.01em;
+}
+
+.oval-node:hover {
+    transform: translate(-50%, -50%) scale(1.05);
+}
+
+.oval-node:hover .node-title-bold {
+    color: var(--text-primary);
+}
+
+/* Logo Marquee Container Box */
+.logo-marquee-card {
+    width: 100%;
+    max-width: 800px;
+    background: linear-gradient(145deg, rgba(9, 26, 56, 0.5) 0%, rgba(4, 12, 26, 0.8) 100%);
+    border: 1px solid rgba(242, 239, 233, 0.08);
+    backdrop-filter: blur(16px);
+    border-radius: 4px;
+    padding: 2.2rem 2rem;
+    overflow: hidden;
+    z-index: 2;
+}
+
+.marquee-title {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--text-secondary);
+    text-align: center;
+    letter-spacing: 0.18em;
+    margin-bottom: 1.8rem;
+}
+
+/* Marquee Tracks */
+.marquee-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.1rem;
+    position: relative;
+    overflow: hidden;
+    mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+}
+
+.marquee-track {
+    display: flex;
+    gap: 1.5rem;
+    width: max-content;
+}
+
+.track-forward {
+    animation: scrollForward 28s linear infinite;
+}
+
+.track-reverse {
+    animation: scrollReverse 28s linear infinite;
+}
+
+.marquee-container:hover .marquee-track {
+    animation-play-state: paused;
+}
+
+.logo-item {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    background: rgba(9, 26, 56, 0.4);
+    border: 1px solid rgba(242, 239, 233, 0.07);
+    border-radius: 4px;
+    padding: 0.6rem 1.3rem;
+    white-space: nowrap;
+    transition: background 0.3s ease, border-color 0.3s ease, transform 0.2s ease;
+}
+
+.brand-icon {
+    width: 18px;
+    height: 18px;
+    color: var(--text-secondary);
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
+}
+
+.logo-item span {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    letter-spacing: 0.02em;
+}
+
+.logo-item:hover {
+    background: linear-gradient(145deg, rgba(13, 40, 87, 0.7) 0%, rgba(4, 12, 26, 0.9) 100%);
+    border-color: rgba(242, 239, 233, 0.2);
+    transform: translateY(-2px);
+}
+
+.logo-item:hover .brand-icon {
+    transform: scale(1.15);
+    color: var(--text-primary);
+}
+
+.logo-item:hover span {
+    color: var(--text-primary);
+}
+
+/* Infinite Scroll Keyframes */
+@keyframes scrollForward {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+@keyframes scrollReverse {
+    0% {
+        transform: translateX(-50%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+/* Mobile Responsive - Full Circle Layout matching reference */
+@media (max-width: 768px) {
+    .why-diagram-wrapper {
+        max-width: 100%;
+        padding: 0 1rem;
+    }
+
+    /* Fixed height diagram container for absolute positioning */
+    .why-diagram {
+        position: relative;
+        width: 100%;
+        height: 560px;
+        margin-bottom: 2rem;
+    }
+
+    /* Hide desktop SVG, show mobile SVG */
+    .diagram-svg {
+        display: none;
+    }
+    .diagram-svg-mobile {
+        display: block !important;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 290px;
+        height: 290px;
+        z-index: 1;
+    }
+
+    /* "Learn the Skill" — top, centered above circle */
+    .label-left {
+        position: absolute;
+        left: 50%;
+        top: 18px;
+        transform: translateX(-50%);
+        text-align: center;
+        align-items: center;
+        width: auto;
+    }
+
+    /* "Make Impact" — bottom, centered below circle */
+    .label-right {
+        position: absolute !important;
+        left: 50%;
+        top: auto;
+        bottom: 10px;
+        right: auto;
+        transform: translateX(-50%);
+        text-align: center;
+        align-items: center;
+        width: auto;
+    }
+
+    /* Top node — Problem Solving / Case Competitions — upper quarter inside circle */
+    .node-top {
+        position: absolute !important;
+        left: 50%;
+        top: 190px;
+        transform: translate(-50%, -50%) !important;
+        text-align: center;
+        align-items: center;
+    }
+
+    /* Center node — Get Top Tier / Placements */
+    .node-center {
+        position: absolute !important;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%) !important;
+        text-align: center;
+        align-items: center;
+        padding: 0;
+    }
+
+    /* Bottom node — Build Leadership & Network — lower quarter inside circle */
+    .node-bottom {
+        position: absolute !important;
+        left: 50%;
+        top: 375px;
+        transform: translate(-50%, -50%) !important;
+        text-align: center;
+        align-items: center;
+    }
+
+    /* All nodes */
+    .oval-node {
+        background-color: transparent;
+        z-index: 2;
+        padding: 0.4rem 0.8rem;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .logo-marquee-card {
+        padding: 1.5rem 0.5rem;
+    }
+}
+
+
+
