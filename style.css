@@ -749,6 +749,26 @@ body.modal-open {
     pointer-events: none;
 }
 
+.highlight-anim-desktop-top {
+    stroke-dasharray: 400;
+    stroke-dashoffset: 400;
+    animation: drawHighlightDesktop 5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+.highlight-anim-desktop-bottom {
+    stroke-dasharray: 400;
+    stroke-dashoffset: 400;
+    animation: drawHighlightDesktop 5s cubic-bezier(0.4, 0, 0.2, 1) 1s infinite backwards;
+}
+
+@keyframes drawHighlightDesktop {
+    0% { stroke-dashoffset: 400; opacity: 0; }
+    5% { opacity: 1; }
+    40% { stroke-dashoffset: 0; }
+    80% { stroke-dashoffset: 0; opacity: 1; }
+    100% { stroke-dashoffset: 0; opacity: 0; }
+}
+
 /* Mobile Full Circle SVG — hidden on desktop */
 .diagram-svg-mobile {
     display: none;
