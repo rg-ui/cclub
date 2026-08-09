@@ -640,6 +640,13 @@ body.modal-open {
     .modal-footer {
         padding: 1rem 1.5rem;
     }
+    
+    /* Center and shrink member card on mobile when single-column */
+    .member-card {
+        max-width: 240px;
+        margin: 0 auto;
+        text-align: center;
+    }
 }
 
 /* ==========================================================================
