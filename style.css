@@ -668,6 +668,10 @@ body.modal-open {
     .hamburger.active .bar:nth-child(3) {
         transform: translateY(-7px) rotate(-45deg);
     }
+    .hero {
+        background-attachment: scroll, scroll;
+        background-position: left center, center;
+    }
 
     .hero-title { font-size: 10vw; }
     .hero-actions { flex-direction: column; width: 100%; }
