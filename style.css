@@ -210,14 +210,268 @@ h1, h2, h3, h4, .logo-text { font-family: var(--font-heading); font-weight: 500;
 .about-right { width: 50%; padding-top: 3rem;}
 .about .section-description { font-size: 1.15rem; font-weight: 300; line-height: 1.8; color: var(--text-secondary);}
 
-/* Services */
-.services { background: #15171e; border-bottom: 1px solid var(--border-color);}
-.services .section-title { font-size: 2rem; border-bottom: 1px solid var(--border-color); padding-bottom: 1rem; display: inline-block; margin-bottom: 3.5rem; }
-.service-card { background: linear-gradient(145deg, #091a38 0%, #08090b 100%); padding: 2.5rem 2rem; border: 1px solid rgba(255,255,255,0.05); transition: var(--transition); }
-.service-card:hover { background: linear-gradient(145deg, #0d2857 0%, #08090b 100%); border: 1px solid var(--border-color); transform: translateY(-5px);}
-.service-icon { width: 32px; height: 32px; color: var(--text-primary); margin-bottom: 2rem; }
-.service-card h3 { font-family: var(--font-body); font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 1.5rem; font-weight: 600; }
-.service-card p { font-size: 0.85rem; color: var(--text-secondary); line-height: 1.7; }
+/* ==========================================================================
+   Modern Bento Grid Section (What We Deliver)
+   ========================================================================== */
+.bento-section {
+    background: #090b10;
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+    position: relative;
+}
+
+.bento-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.bento-card {
+    background: linear-gradient(160deg, rgba(13, 27, 54, 0.45) 0%, rgba(6, 11, 20, 0.8) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    border-radius: 6px;
+    padding: 2.4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.35s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.bento-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(56, 189, 248, 0.3), transparent);
+    opacity: 0;
+    transition: opacity 0.35s ease;
+}
+
+.bento-card:hover {
+    border-color: rgba(56, 189, 248, 0.35);
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 25px rgba(56, 189, 248, 0.08);
+}
+
+.bento-card:hover::before {
+    opacity: 1;
+}
+
+/* Sizing */
+.bento-card-large {
+    grid-column: span 7;
+}
+
+.bento-card-medium {
+    grid-column: span 5;
+}
+
+.bento-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.bento-num {
+    font-family: var(--font-heading);
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: var(--text-muted);
+}
+
+.bento-tag {
+    font-family: var(--font-body);
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #38bdf8;
+    background: rgba(56, 189, 248, 0.08);
+    border: 1px solid rgba(56, 189, 248, 0.2);
+    padding: 0.25rem 0.65rem;
+    border-radius: 3px;
+    font-weight: 600;
+}
+
+.bento-icon {
+    width: 38px;
+    height: 38px;
+    color: #38bdf8;
+    margin-bottom: 1.2rem;
+}
+
+.bento-icon svg {
+    width: 100%;
+    height: 100%;
+}
+
+.bento-title {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    color: #ffffff;
+    font-weight: 500;
+    margin-bottom: 0.85rem;
+    line-height: 1.25;
+}
+
+.bento-desc {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+}
+
+/* Pills & Chips */
+.bento-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.pill-chip {
+    font-size: 0.75rem;
+    color: #e2e8f0;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 0.35rem 0.75rem;
+    border-radius: 4px;
+    letter-spacing: 0.3px;
+}
+
+/* Stats Row */
+.bento-stats-row {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+    gap: 1rem;
+}
+
+.bento-stat {
+    display: flex;
+    flex-direction: column;
+}
+
+.bento-stat-num {
+    font-family: var(--font-heading);
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #38bdf8;
+}
+
+.bento-stat-label {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--text-muted);
+    margin-top: 0.2rem;
+}
+
+/* Feature List in Card 2 */
+.bento-feature-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.bento-feature-list li {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    font-size: 0.85rem;
+    color: #cbd5e1;
+}
+
+.check-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #38bdf8;
+    flex-shrink: 0;
+    box-shadow: 0 0 8px rgba(56, 189, 248, 0.6);
+}
+
+/* Tags Cloud in Card 3 */
+.bento-tags-cloud {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.45rem;
+}
+
+.mini-tag {
+    font-size: 0.72rem;
+    color: #94a3b8;
+    background: rgba(15, 23, 42, 0.6);
+    border: 1px solid rgba(148, 163, 184, 0.12);
+    padding: 0.3rem 0.65rem;
+    border-radius: 3px;
+}
+
+/* Divisions Grid in Card 4 */
+.bento-divisions-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.85rem;
+}
+
+.division-box {
+    background: rgba(4, 9, 18, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 4px;
+    padding: 1rem 1.1rem;
+    transition: all 0.3s ease;
+}
+
+.division-box:hover {
+    border-color: rgba(56, 189, 248, 0.25);
+    background: rgba(8, 18, 38, 0.6);
+}
+
+.division-title {
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin-bottom: 0.35rem;
+}
+
+.division-box p {
+    font-size: 0.78rem;
+    color: var(--text-secondary);
+    line-height: 1.45;
+    margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .bento-card-large, .bento-card-medium {
+        grid-column: span 12;
+    }
+}
+
+@media (max-width: 768px) {
+    .bento-grid {
+        grid-template-columns: 1fr;
+        gap: 1.2rem;
+    }
+    .bento-card-large, .bento-card-medium {
+        grid-column: span 1;
+    }
+    .bento-divisions-grid {
+        grid-template-columns: 1fr;
+    }
+    .bento-stats-row {
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+}
 
 /* ==========================================================================
    Interactive MECE Problem-Solving Tree Section
@@ -464,13 +718,7 @@ h1, h2, h3, h4, .logo-text { font-family: var(--font-heading); font-weight: 500;
 }
 
 
-/* Teams (Internal Core) */
-.teams { background: #15171e; border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color);}
-.teams .section-title { font-size: 1.8rem; margin-bottom: 3rem; }
-.vertical-card { background: linear-gradient(145deg, #05142e 0%, transparent 100%); border: 1px solid var(--border-color); padding: 2.5rem 2rem; transition: var(--transition);}
-.vertical-card:hover { background: linear-gradient(145deg, #0e2a5e 0%, #040507 100%); border-color: rgba(255,255,255,0.2); }
-.vertical-card h3 { font-family: var(--font-body); font-weight: 600; font-size: 0.9rem; margin-bottom: 1.5rem; text-transform: uppercase; letter-spacing: 1px;}
-.vertical-card p { font-size: 0.85rem; color: var(--text-secondary); line-height: 1.6; }
+
 
 /* Members */
 .members { background: var(--bg-primary); }
