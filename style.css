@@ -12,7 +12,7 @@
     --text-primary: #f2efe9; /* Premium off-white/beige */
     --text-secondary: #94969c; /* Matte grey text */
     --text-muted: #64666f;
-    --border-color: rgba(242, 239, 233, 0.08); /* Faint beige border */
+    --border-color: rgba(242, 239, 233, 0.045); /* Soft faded beige border */
     
     /* Typography */
     --font-heading: 'Playfair Display', serif;
@@ -215,20 +215,20 @@ h1, h2, h3, h4, .logo-text { font-family: var(--font-heading); font-weight: 500;
    ========================================================================== */
 .practice-section {
     background: var(--bg-primary);
-    border-bottom: 1px solid var(--border-color);
+    border-bottom: 1px solid rgba(242, 239, 233, 0.038);
 }
 
 .practice-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    border-top: 1px solid var(--border-color);
-    border-bottom: 1px solid var(--border-color);
+    border-top: 1px solid rgba(242, 239, 233, 0.038);
+    border-bottom: 1px solid rgba(242, 239, 233, 0.038);
     margin-top: 3.5rem;
 }
 
 .practice-item {
     padding: 3.5rem 2.2rem;
-    border-right: 1px solid var(--border-color);
+    border-right: 1px solid rgba(242, 239, 233, 0.038);
     transition: var(--transition);
     background: transparent;
 }
@@ -1052,8 +1052,8 @@ body.modal-open {
 .logo-marquee-card {
     width: 100%;
     max-width: 800px;
-    background: linear-gradient(145deg, rgba(9, 26, 56, 0.5) 0%, rgba(4, 12, 26, 0.8) 100%);
-    border: 1px solid rgba(242, 239, 233, 0.08);
+    background: linear-gradient(145deg, rgba(9, 26, 56, 0.4) 0%, rgba(4, 12, 26, 0.75) 100%);
+    border: 1px solid rgba(242, 239, 233, 0.04);
     backdrop-filter: blur(16px);
     border-radius: 4px;
     padding: 2.2rem 2rem;
@@ -1103,8 +1103,8 @@ body.modal-open {
     display: flex;
     align-items: center;
     gap: 0.65rem;
-    background: rgba(9, 26, 56, 0.4);
-    border: 1px solid rgba(242, 239, 233, 0.07);
+    background: rgba(9, 26, 56, 0.35);
+    border: 1px solid rgba(242, 239, 233, 0.038);
     border-radius: 4px;
     padding: 0.6rem 1.3rem;
     white-space: nowrap;
